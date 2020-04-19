@@ -1,0 +1,59 @@
+/* CONFIGURAR ENTORNO */
+
+git config --global user.name " "
+git config --global user.email " "
+
+
+/* CREAR REPOSITORIO */
+
+**Para nuevos repositorios
+git init        //en carpeta master
+git remote add origin <dir-repo>
+
+**Para repositorios existentes:
+git clone <dir-repo>
+
+
+-------
+/* GESTIONAR CAMBIOS */
+
+git add .                   //añadir archivos a Staging
+git commit -m 'comentario'  //se confirman cambios
+
+
+/* REVISAR CAMBIOS */
+
+git log// muestra todos los commit
+git log --stat                  // muestra todos los commit junto con el detalle
+git show <nombre de archivo>    //muestra cambios del archivo
+git diff #(old commit) #(new commit)        //compara commits
+
+
+/* RESTAURAR CAMBIOS */
+
+git checkout ### <archivo> | .      //permite ver un archivo en especifico como estaba antes
+git checkout master <archivo> | .   //regresa al head de los commits
+
+
+/* ELIMINAR CAMBIOS */
+git reset HEAD <archivo> | .    //De Staging a Unstaged, les quita el add
+
+**Cuidado Elimina archivos
+git rm --cached <archivo>       //Elimina los archivos del área de Staging pero los mantiene en nuestro disco duro
+git rm --force <archivo>        //Elimina los archivos de Git y del disco duro
+
+**Cuidado Regres en el tiempo sin vuelta atras
+git reset ### --hard    //regresa al commit indicado, sin guardar Staging
+git reset ### --soft    //mantiene los cambios en el Staging
+
+
+------
+/* CREAR RAMAS */
+git branch <nombre>         //Crea rama
+git checkout -b <nombre>    //Crea rama y se mueve a ella
+
+/* MOVERSE EN RAMAS */
+git checkout <nombre>       //Se mueve a la rama indicada
+
+/* MERGE RAMAS */
+git merge <rama>        //Se realiza desde la rama principal
