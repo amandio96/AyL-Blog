@@ -2,7 +2,14 @@ body {
     color: antiquewhite;
     text-align: center;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 30px;   
+}
 
-    
+.container {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: left;
+    color: black;
+    padding-left: 20px;
 }
