@@ -57,3 +57,7 @@ git checkout <nombre>       //Se mueve a la rama indicada
 
 /* MERGE RAMAS */
 git merge <rama>        //Se realiza desde la rama principal
+
+git remote set-url origin <nombre de ssh o https>
+
+git remote -v 
